@@ -1,0 +1,14 @@
+.parent>div{
+    background-color: #4040a1;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 60px;
+}
+.parent{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
