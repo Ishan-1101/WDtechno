@@ -1,20 +1,20 @@
 import React from "react";
 import "./App.css";
 export default function App() {
-  const addDataIntoCache = (cacheName, url, response) => {
-    const data = new Response(JSON.stringify(response));
+  const addDataIntoCache = (Name, url, res) => {
+    const data = new Response(JSON.stringify(res));
 
     if ("caches" in window) {
-      caches.open(cacheName).then((cache) => {
+      caches.open(Name).then((cache) => {
         cache.put(url, data);
         // alert("Data Added into cache!");
       });
     }
   };
 
-  const deleteSpecificCache = (cacheName) => {
+  const deleteSpecificCache = (Name) => {
     if ("caches" in window) {
-      caches.delete(cacheName).then( (res) =>{
+      caches.delete(Name).then( (res) =>{
         // alert(cacheName);
         return res;
       });
