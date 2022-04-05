@@ -1,0 +1,8 @@
+1) create a store
+reducer,state
+2) create Reducer(agent)
+state,action
+3)Subscribe(base/state needs to be subscribed)
+4)Dispatch(what action u need to take)
+
+//step 2 will go before step 1
