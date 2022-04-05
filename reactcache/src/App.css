@@ -1,0 +1,7 @@
+div{
+  background-color: #282c34;
+  color: #fff;
+  height:100vh;
+  display: grid;
+  place-items: center;
+}
