@@ -8,7 +8,7 @@ function App() {
   const getSomething = () => {
     Axios.get(`https://www.boredapi.com/api/activity`).then(
       (res)=>{
-        setSomething(res.data.activity);
+        console.log(res);
       }
     )
     // fetch(`https://www.boredapi.com/api/activity`)
