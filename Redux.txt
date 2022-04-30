@@ -1,8 +1,28 @@
+TERMS
+
+#Payload is what is keyed ( the key value pairs ) in your actions and passed around between reducers in your redux application.
+
+#Actions: Actions are a plain JavaScript object that contains information{key(type of action you need to perform) and payload}. Actions are the only source of information for the store.(action creator are functions that return these actions)
+
+#Reducers: As we already know, actions only tell what to do, but they don't tell how to do, so reducers are the pure functions that take the current state and action and return the new state and tell the store how to do.
+So why do we use reducer in react?
+The reducer function uses the action object and performs a state update, returning the new state. React then checks whether the new state differs from the previous one. If the state has been updated, React re-renders the component and useReducer() returns the new state value.
+
+#Store: A store is a state container which holds the application's state. Redux can have only a single store in your application. Whenever a store is created in Redux, you need to specify the reducer.It is highly recommended to keep only one store in any Redux application. You can access the state stored, update the state, and register or unregister listeners via helper methods.
+
+LINK REACT APP TO REDUX:
+In index.js: 
+import { Provider } from 'react-redux';
+import store from './redux/store'
+Then 
+<Provider store={store}>
+    <App />
+    </Provider>
+
 1) create a store
 reducer,state
 2) create Reducer(agent)
 state,action
 3)Subscribe(base/state needs to be subscribed)
 4)Dispatch(what action u need to take)
-
 //step 2 will go before step 1
