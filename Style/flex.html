@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Grid Area</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: grid;
+            grid-template-areas:
+                "header header header header"
+                "...... main   side   ......"
+                "footer footer footer footer";
+        }
+
+        @media screen and (max-width:740px) {
+            body {
+                grid-template-areas:
+                    "header header header header"
+                    "...... main   main   ......"
+                    "...... side   side   ......"
+                    "footer footer footer footer";
+            }
+        }
+
+        header {
+            background-color: hsl(0, 36%, 90%);
+            grid-area: header;
+        }
+
+        .main-content {
+            background-color: hsl(0, 70%, 45%);
+            grid-area: main;
+        }
+
+        .sidebar {
+            background-color: hsl(0, 18%, 22%);
+            grid-area: side;
+            color: hsl(0, 0%, 100%);
+        }
+
+        footer {
+            background-color: hsl(0, 9%, 11%);
+            color: hsl(0, 0%, 100%);
+            grid-area: footer;
+        }
+
+        header,
+        .main-content,
+        .sidebar,
+        footer {
+            padding: 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <header>Grid Areas are magical!</header>
+    <div class="main-content">Main Content</div>
+    <div class="sidebar">Sidebar</div>
+    <footer>Footer</footer>
+</body>
+
+</html>
